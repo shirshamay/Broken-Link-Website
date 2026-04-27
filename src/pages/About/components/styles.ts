@@ -43,32 +43,35 @@ export const bigContainerStyle = {
   gap: theme.spacing.xl,
   gridTemplateColumns: 'repeat(2, 1fr)',
 };
-export const titleStyle: CSSProperties = {
-  color: 'white',
-  fontWeight: 700,
-  fontSize: theme.fontSizes.xl,
-};
-
-export const paragraphStyle: CSSProperties = {
-  color: theme.colors.primary[1],
-};
-export const featureCardStyles: CSSProperties = {
-  backgroundColor: colors.primary[8],
-  border: `1px solid ${rgba(colors.primary[2], 0.15)}`,
-  borderRadius: '24px',
-  width: '100%',
-  padding: theme.spacing.xl,
-  display: 'grid',
-  gridTemplateColumns: 'auto 1fr',
-  alignItems: 'start',
-  gap: theme.spacing.lg,
-  height: '100%',
+export const featureCardStyles = (isDark: boolean) => {
+  return {
+    featureCard: {
+      backgroundColor: isDark ? colors.primary[8] : theme.white,
+      border: `1px solid ${isDark ? colors.primary[9] : colors.gray[3]}`,
+      borderRadius: '1.5rem',
+      width: '100%',
+      padding: theme.spacing.xl,
+      display: 'grid',
+      gridTemplateColumns: 'auto 1fr',
+      alignItems: 'start',
+      gap: theme.spacing.lg,
+      height: '100%',
+    },
+    title: {
+      color: isDark ? theme.colors.primary[0] : theme.colors.primary[2],
+      fontWeight: 700,
+      fontSize: theme.fontSizes.xl,
+    },
+    description: {
+      color: isDark ? theme.colors.gray[3] : theme.colors.primary[7],
+    },
+  };
 };
 
 export const missionCardStyles = (isDark: boolean) => {
   return {
     card: {
-      backgroundColor: isDark ? colors.primary[8] : theme.colors.primary[8],
+      backgroundColor: isDark ? colors.primary[8] : theme.white,
       border: `1px solid ${isDark ? colors.primary[9] : colors.gray[3]}`,
       borderRadius: '1.5rem',
       minHeight: '15rem',
@@ -82,13 +85,13 @@ export const missionCardStyles = (isDark: boolean) => {
     } as CSSProperties,
 
     title: {
-      color: theme.colors.primary[0],
+      color: isDark ? theme.colors.primary[0] : theme.colors.primary[2],
       fontWeight: 700,
-      fontSize: '26px',
+      fontSize: theme.spacing.xl,
     } as CSSProperties,
 
     paragraph: {
-      color: colors.primary[1],
+      color: isDark ? theme.colors.primary[0] : colors.primary[2],
       fontSize: theme.fontSizes.lg,
       lineHeight: 1.6,
     } as CSSProperties,
@@ -122,8 +125,8 @@ export const aboutPageStyle = {
   titleStyle: {
     ...sharedStyles.sectionTitle,
     display: 'inline-block',
-    fontSize: '3rem',
-    fontWeight: 700,
+    fontSize: '3.3rem',
+    fontWeight: 800,
   } satisfies CSSProperties,
 
   brandStyle: {
@@ -142,6 +145,6 @@ export const aboutPageStyle = {
     paddingBlock: theme.spacing.lg,
     fontSize: theme.fontSizes.lg,
     textAlign: 'center',
-    maxWidth: '700px',
+    maxWidth: '43.75rem',
   } satisfies CSSProperties,
 };

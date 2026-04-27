@@ -4,12 +4,11 @@ export const desktopStyles = {
   container: {
     width: '100%',
     display: 'flex',
-    minHeight: '74px',
+    minHeight: '4.625rem',
     justifyContent: 'space-evenly',
     alignItems: 'center',
     marginTop: '.45rem',
-    boxShadow: '0 2px 8px rgba(0, 0, 0, 0.1)',
-    borderBottom: '1px solid rgba(255, 255, 255, 0.08)',
+    borderBottom: '1px solid light-dark(transparent, var(--mantine-color-primary-6))',
   },
   headerContainer: { display: 'flex', alignItems: 'center' },
   logoSize: { height: '1.75rem' },
@@ -20,16 +19,17 @@ export const desktopStyles = {
     alignItems: 'center',
   },
   linkHoverColor: (isPathMatch: boolean) =>
-    isPathMatch ? theme.colors.cyan[4] : theme.colors.gray[1],
+    isPathMatch ? theme.colors.cyan[4] : theme.colors.primary[3],
 
-  linkColor: (isPathMatch: boolean) => (isPathMatch ? theme.colors.cyan[4] : theme.colors.gray[4]),
+  linkColor: (isPathMatch: boolean) =>
+    isPathMatch ? 'var(--mantine-color-cyan-filled)' : 'var(--mantine-color-gray-text)',
   linkStyle: {
-    fontWeight: 400,
+    fontWeight: 700,
     padding: '.77rem',
     whiteSpace: 'nowrap',
   },
   button: {
-    height: '30px',
+    height: '1.875rem',
     borderRadius: theme.radius.sm,
     gap: theme.spacing.sm,
     color: theme.colors.primary[1],
@@ -58,10 +58,11 @@ export const mobileStyles = {
     fontSize: '1rem',
     whiteSpace: 'nowrap',
   },
-  linkColor: (isPathMatch: boolean) => (isPathMatch ? theme.colors.cyan[4] : theme.colors.gray[7]),
+  linkColor: (isPathMatch: boolean) =>
+    isPathMatch ? 'var(--mantine-color-cyan-filled)' : 'var(--mantine-color-gray-text)',
   linkContainer: (isPathMatch: boolean) => ({
-    backgroundColor: isPathMatch ? '#1e293b' : 'transparent',
-    borderRadius: '8px',
+    backgroundColor: isPathMatch ? theme.colors.primary[6] : 'transparent',
+    borderRadius: '0.5rem',
     padding: '.6rem',
   }),
   linksDivider: { marginLeft: 'calc(50% - 50vw)', marginRight: 'calc(50% - 50vw)' },
@@ -73,7 +74,7 @@ export const mobileStyles = {
   },
   button: {
     margin: '.6rem',
-    borderRadius: '4px',
+    borderRadius: '0.25rem',
     display: 'block',
     flex: 1,
   },
@@ -105,7 +106,7 @@ export const languageSelectProps = {
       backgroundColor: 'transparent',
       color: theme.colors.primary[1],
       border: 'none',
-      height: '30px',
+      height: '1.875rem',
     },
     section: {
       color: theme.colors.primary[1],

@@ -1,6 +1,6 @@
 import { useTranslation } from 'react-i18next';
-import { Card } from '@/components/UI/Card/Card';
 import { useIsDark } from '@/components/Hooks/useIsDark';
+import { Card } from '@/components/UI/Card/Card';
 import { Typography } from '@/components/UI/Typography/Typography';
 import { missionCardStyles } from './styles';
 
