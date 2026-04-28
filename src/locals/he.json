@@ -149,8 +149,14 @@
       "empty_state": "הכנסו URL או מאגר למעלה כדי להתחיל סריקה של קישורים שבורים",
       "loading": "סורק...",
       "response_time": "זמן תגובה: {{responseTime}}ms",
-      "total_response_time": "זמן תגובה כולל: {{responseTime}}ms",
-      "summary": "{{working}} פועלים, {{broken}} שבורים מתוך {{total}}",
+      "seconds": "ש",
+      "working_links": "קישורים תקינים",
+      "broken_links": "קישורים שבורים",
+      "link_status_header": "סטטוס קישורים",
+      "status_error": "שגיאה",
+      "scanned_label": "נסרקו:",
+      "link_one": "{{count}} קישור",
+      "link_other": "{{count}} קישורים",
       "errors": {
         "url_required": "נדרש URL",
         "internal_server_error": "שגיאת שרת",
@@ -158,6 +164,18 @@
         "one_url_required": "נדרש לפחות URL אחד",
         "maximum_urls_allowed": "מקסימום {{max}} כתובות URL מותרות לכל בקשה"
       }
-    }
+    },
+    "server_notice": "*כרגע אין לנו שרת פעיל, ולכן מה שמופיע למעלה לא יעבוד"
+  },
+  "error_boundary": {
+    "title": "משהו השתבש!",
+    "description": "אנחנו מצטערים, אבל אירעה שגיאה לא צפויה.",
+    "what_you_can_try": "מה אפשר לנסות:",
+    "suggestions": {
+      "refresh": "רעננו את הדף",
+      "clear_cache": "נקו את מטמון הדפדפן",
+      "try_again": "נסו שוב בעוד כמה דקות"
+    },
+    "go_home": "חזרה לדף הבית"
   }
 }
